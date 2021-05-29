@@ -1,1 +1,56 @@
 // Mixins Here
+.navMix {
+    background-color: @nav-bg;
+    font-family: @nav-font;
+    border: @nav-border 1px solid;
+}
+
+.display {
+    display: flex;
+}
+
+.btnMix(@btn-bg-color: #22283A, @color: #F6F7F8 ){
+    display: block;
+    background-color: @btn-bg-color;
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 32%;
+    height: 6vh;
+    font-size: 2rem;
+    border-radius: 10px;
+    color: @color;
+
+    @media @phone {
+        height: 12vh;
+        width: 100%;
+        font-size: 2.5rem;
+        padding: 25px 0;
+    }
+
+    &:hover {
+        background-color: @color;
+        color: @btn-bg-color;
+    }
+}
+
+.keyframes(@name; @rule){
+    @-webkit-keyframes @name {
+        @rule();
+    }
+
+    @-moz-keyframes @name {
+        @rule();
+    }
+
+    @keyfreames @name {
+        @rule();
+    }
+}
+
+.animation(@rule){
+    -webkit-animation: @rule;
+    -moz-animation: @rule;
+    animation: @rule;
+}

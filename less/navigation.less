@@ -1,1 +1,31 @@
 // Navigation code here
+
+.containerNav {
+    .display ();
+    flex-direction: column;
+    align-items: center;
+    .navMix ();
+
+    h1 {
+        font-size: 4rem;
+        margin: 1rem 0;
+    }
+
+    nav {
+        width: 30%;
+        margin: 1rem auto;
+        .display ();
+        justify-content: space-around;
+
+        @media (max-width: 500px) {
+            width: 80%;
+        }
+
+
+        a {
+            text-decoration: none;
+            font-size: 1.65rem;
+            color: @nav-font;
+        }
+    }
+}
